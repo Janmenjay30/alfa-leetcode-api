@@ -155,6 +155,7 @@ app.get('/userProfileCalendar', async (req, res) => {
 // Format data
 const formatData = (data: any) => {
   return {
+     username: data.matchedUser.username, 
     totalSolved: data.matchedUser.submitStats.acSubmissionNum[0].count,
     totalSubmissions: data.matchedUser.submitStats.totalSubmissionNum,
     totalQuestions: data.allQuestionsCount[0].count,
